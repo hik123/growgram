@@ -8,4 +8,10 @@
         , pic = #{pic}
         , COMMENT = #{comment}
     </insert>
+
+    <select id="selPlantAll">
+        SELECT iplant, nicknm, pic, comment, created_at AS createdAt
+        FROM t_plant
+        WHERE iuser = #{iuser}
+    </select>
 </mapper>
